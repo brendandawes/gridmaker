@@ -40,6 +40,7 @@ void draw(){
 
   //drawLinesRotated();
   drawLines();
+  drawVerticalLines();
   //drawDots();
   //drawSineWaves();
   //drawSineWavesLines();
@@ -148,14 +149,28 @@ void drawLines(){
 }
 
 void drawVerticalLines(){
-
+  pushMatrix();
+  //translate(0,height/2);
   strokeWeight(0.1);
 
-  for(int j=0; j < width; j++){
-    float x=(float)logMap.getMappedValueFor(log(j));
+  float x = 1;
+  float i = 0;
+  float freq = 1200.0;
+  float scaler = 10;
+
+  while(x < width){
+
     stroke(0);
+    //strokeWeight(noise(i)*2);
     line(x,0,x,height);
+    float spacing = sin(i/freq)*scaler;
+    //spacing = map(spacing,-50,50,0,height);
+    x += spacing;
+    x = dawesome.snapToGrid(x,6);
+    i++;
   }
+  popMatrix();
+
 }
 
 void drawDots(){

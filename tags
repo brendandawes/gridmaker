@@ -15,6 +15,7 @@ drawLines	MakeMakeBetter.pde	/^void drawLines(){$/;"	m
 drawLinesRotated	MakeMakeBetter.pde	/^void drawLinesRotated(){$/;"	m
 drawSineWaves	MakeMakeBetter.pde	/^void drawSineWaves(){$/;"	m
 drawSineWavesLines	MakeMakeBetter.pde	/^void drawSineWavesLines(){$/;"	m
+drawVerticalLines	MakeMakeBetter.pde	/^void drawVerticalLines(){$/;"	m
 expectedMaxValue	MakeMakeBetter.pde	/^float expectedMaxValue;$/;"	
 expectedMinValue	MakeMakeBetter.pde	/^float expectedMinValue=1;$/;"	
 keyReleased	MakeMakeBetter.pde	/^void keyReleased() {$/;"	m
