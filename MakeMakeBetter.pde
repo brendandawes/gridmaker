@@ -124,14 +124,24 @@ void drawLinesRotated(){
 }
 void drawLines(){
 
+  pushMatrix();
+  //translate(0,height/2);
   strokeWeight(0.1);
 
-  for(int i=0; i < height; i++){
-    float y=(float)logMap.getMappedValueFor(log(i));
+  float y = height/2;
+  float i = 0;
+  while(y < height){
+
     stroke(0);
     //strokeWeight(noise(i)*2);
     line(0,y,width,y);
+    float spacing = sin(i/100.0)*100;
+    //spacing = map(spacing,-50,50,0,height);
+    y += spacing;
+    y = dawesome.snapToGrid(y,6);
+    i++;
   }
+  popMatrix();
 }
 
 void drawVerticalLines(){
