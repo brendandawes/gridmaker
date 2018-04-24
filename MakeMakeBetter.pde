@@ -21,7 +21,7 @@ ScaleMap logMap;
 DawesomeToolkit dawesome; //http://cloud.brendandawes.com/dawesometoolkit/
 
 void setup(){
-  size(300,700);
+  size(300,612);
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
   expectedMinValue = 1;
