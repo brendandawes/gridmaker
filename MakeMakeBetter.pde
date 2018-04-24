@@ -128,14 +128,17 @@ void drawLines(){
   //translate(0,height/2);
   strokeWeight(0.1);
 
-  float y = height/2;
+  float y = 1;
   float i = 0;
+  float freq = 500.0;
+  float scaler = 400;
+
   while(y < height){
 
     stroke(0);
     //strokeWeight(noise(i)*2);
     line(0,y,width,y);
-    float spacing = sin(i/100.0)*100;
+    float spacing = sin(i/freq)*scaler;
     //spacing = map(spacing,-50,50,0,height);
     y += spacing;
     y = dawesome.snapToGrid(y,6);
