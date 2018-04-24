@@ -38,8 +38,8 @@ void draw(){
     smooth();
   }
 
-  drawLinesRotated();
-  //drawLines();
+  //drawLinesRotated();
+  drawLines();
   //drawDots();
   //drawSineWaves();
   //drawSineWavesLines();
@@ -126,19 +126,25 @@ void drawLines(){
 
   strokeWeight(0.1);
 
+  for(int i=0; i < height; i++){
+    float y=(float)logMap.getMappedValueFor(log(i));
+    stroke(0);
+    //strokeWeight(noise(i)*2);
+    line(0,y,width,y);
+  }
+}
+
+void drawVerticalLines(){
+
+  strokeWeight(0.1);
+
   for(int j=0; j < width; j++){
     float x=(float)logMap.getMappedValueFor(log(j));
     stroke(0);
     line(x,0,x,height);
   }
-  for(int i=0; i < height; i++){
-    float y=(float)logMap.getMappedValueFor(log(i));
-    stroke(0);
-
-    strokeWeight(noise(i)*2);
-    line(0,y,width,y);
-  }
 }
+
 void drawDots(){
 
   strokeWeight(1);
