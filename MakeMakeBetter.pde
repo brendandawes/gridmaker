@@ -131,8 +131,9 @@ void drawLines(){
 
   float y = 1;
   float i = 0;
-  float freq = 500.0;
-  float scaler = 400;
+  float freq = 20.0;
+  float scaler = 1000;
+  float snap = 24;
 
   while(y < height){
 
@@ -142,8 +143,9 @@ void drawLines(){
     float spacing = sin(i/freq)*scaler;
     //spacing = map(spacing,-50,50,0,height);
     y += spacing;
-    y = dawesome.snapToGrid(y,6);
+    y = dawesome.snapToGrid(y,snap);
     i++;
+    //snap +=12;
   }
   popMatrix();
 }
@@ -155,8 +157,9 @@ void drawVerticalLines(){
 
   float x = 1;
   float i = 0;
-  float freq = 1200.0;
-  float scaler = 10;
+  float freq = 100.0;
+  float scaler = 4000;
+  float snap = 24;
 
   while(x < width){
 
@@ -166,7 +169,7 @@ void drawVerticalLines(){
     float spacing = sin(i/freq)*scaler;
     //spacing = map(spacing,-50,50,0,height);
     x += spacing;
-    x = dawesome.snapToGrid(x,6);
+    x = dawesome.snapToGrid(x,snap);
     i++;
   }
   popMatrix();
