@@ -46,24 +46,32 @@ void setup(){
     .setSize(100,20)
     .setRange(MIN_FREQ,MAX_FREQ)
     .setValue(freqV)
+    .setLabel("Vertical Frequency")
+    .setColorLabel(#000000)
     ;
   cp5.addSlider("scalerV")
     .setPosition(20,140)
     .setSize(100,20)
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scalerV)
+    .setLabel("Vertical Scaler")
+    .setColorLabel(#000000)
     ;
   cp5.addSlider("freq")
     .setPosition(20,20)
     .setSize(100,20)
     .setRange(MIN_FREQ,MAX_FREQ)
     .setValue(freq)
+    .setLabel("Horizontal Frequency")
+    .setColorLabel(#000000)
     ;
   cp5.addSlider("scaler")
     .setPosition(20,60)
     .setSize(100,20)
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scaler)
+    .setLabel("Horizontal Scaler")
+    .setColorLabel(#000000)
     ;
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
@@ -76,7 +84,6 @@ void setup(){
 
 void savePDF(float v){
   if (frameCount > 60){
-
   recordPDF = true;
   }
 }
