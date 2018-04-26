@@ -66,17 +66,9 @@ void draw(){
   drawLines(freq,scaler);
   drawVerticalLines();
   //drawDots();
-  //drawSineWaves();
+  drawSineWaves();
   //drawSineWavesLines();
 
-  if (recordVideo){
-    saveFrame("export/####-frame.tga");
-    if (videoFramesCaptured > VIDEO_FRAME_RATE * SECONDS_TO_CAPTURE){
-      recordVideo = false;
-      videoFramesCaptured = 0;
-    }
-    videoFramesCaptured ++;
-  }
 
   if (recordPDF){
     endRecord();
