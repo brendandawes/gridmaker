@@ -5,24 +5,28 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 BACKGROUND_COLOR	MakeMakeBetter.pde	/^final int BACKGROUND_COLOR = #ffffff;$/;"	
+MAX_FREQ	MakeMakeBetter.pde	/^final float MAX_FREQ = 200;$/;"	
+MAX_SCALER	MakeMakeBetter.pde	/^final float MAX_SCALER = 2000;$/;"	
+MIN_FREQ	MakeMakeBetter.pde	/^final float MIN_FREQ = 10;$/;"	
+MIN_SCALER	MakeMakeBetter.pde	/^final float MIN_SCALER = 100;$/;"	
 PROJECT	MakeMakeBetter.pde	/^final String PROJECT = "MakeMakeBetter";$/;"	
-SECONDS_TO_CAPTURE	MakeMakeBetter.pde	/^final int SECONDS_TO_CAPTURE = 60;$/;"	
-VIDEO_FRAME_RATE	MakeMakeBetter.pde	/^final int VIDEO_FRAME_RATE = 60;$/;"	
 cp5	MakeMakeBetter.pde	/^ControlP5 cp5;$/;"	
 dawesome	MakeMakeBetter.pde	/^DawesomeToolkit dawesome; \/\/http:\/\/cloud.brendandawes.com\/dawesometoolkit\/$/;"	
 draw	MakeMakeBetter.pde	/^void draw(){$/;"	m
 drawDots	MakeMakeBetter.pde	/^void drawDots(){$/;"	m
-drawLines	MakeMakeBetter.pde	/^void drawLines(float f){$/;"	m
+drawLines	MakeMakeBetter.pde	/^void drawLines(float f, float s){$/;"	m
 drawLinesRotated	MakeMakeBetter.pde	/^void drawLinesRotated(){$/;"	m
 drawSineWaves	MakeMakeBetter.pde	/^void drawSineWaves(){$/;"	m
 drawSineWavesLines	MakeMakeBetter.pde	/^void drawSineWavesLines(){$/;"	m
-drawVerticalLines	MakeMakeBetter.pde	/^void drawVerticalLines(){$/;"	m
+drawVerticalLines	MakeMakeBetter.pde	/^void drawVerticalLines(float f, float s){$/;"	m
 expectedMaxValue	MakeMakeBetter.pde	/^float expectedMaxValue;$/;"	
 expectedMinValue	MakeMakeBetter.pde	/^float expectedMinValue=1;$/;"	
 freq	MakeMakeBetter.pde	/^float freq = 20;$/;"	
+freqV	MakeMakeBetter.pde	/^float freqV = 20;$/;"	
 keyReleased	MakeMakeBetter.pde	/^void keyReleased() {$/;"	m
 logMap	MakeMakeBetter.pde	/^ScaleMap logMap;$/;"	
 mousePressed	MakeMakeBetter.pde	/^void mousePressed(){$/;"	m
+savePDF	MakeMakeBetter.pde	/^void savePDF(float v){$/;"	m
 scaler	MakeMakeBetter.pde	/^float scaler = 1000;$/;"	
+scalerV	MakeMakeBetter.pde	/^float scalerV = 1000;$/;"	
 setup	MakeMakeBetter.pde	/^void setup(){$/;"	m
-videoFramesCaptured	MakeMakeBetter.pde	/^int videoFramesCaptured = 0;$/;"	

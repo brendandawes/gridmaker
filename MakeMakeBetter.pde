@@ -13,16 +13,17 @@ ControlP5 cp5;
 
 final String PROJECT = "MakeMakeBetter";
 final int BACKGROUND_COLOR = #ffffff;
-final int SECONDS_TO_CAPTURE = 60;
-final int VIDEO_FRAME_RATE = 60;
-
-int videoFramesCaptured = 0;
-boolean recordVideo = false;
+final float MIN_FREQ = 10;
+final float MAX_FREQ = 200;
+final float MIN_SCALER = 100;
+final float MAX_SCALER = 2000;
 boolean recordPDF = false;
 ScaleMap logMap;
 
 float freq = 20;
 float scaler = 1000;
+float freqV = 20;
+float scalerV = 1000;
 
 
 DawesomeToolkit dawesome; //http://cloud.brendandawes.com/dawesometoolkit/
@@ -34,16 +35,34 @@ void setup(){
   cp5.setAutoDraw(false);
   cp5.setColorActive(#FC7357);
   cp5.setColorBackground(#9C9999);
+  cp5.addButton("savePDF")
+    .setValue(0)
+    .setPosition(20,180)
+    .setSize(100,20)
+    .setCaptionLabel("Save PDF")
+    ;
+  cp5.addSlider("freqV")
+    .setPosition(20,100)
+    .setSize(100,20)
+    .setRange(MIN_FREQ,MAX_FREQ)
+    .setValue(freqV)
+    ;
+  cp5.addSlider("scalerV")
+    .setPosition(20,140)
+    .setSize(100,20)
+    .setRange(MIN_SCALER,MAX_SCALER)
+    .setValue(scalerV)
+    ;
   cp5.addSlider("freq")
     .setPosition(20,20)
     .setSize(100,20)
-    .setRange(10,200)
+    .setRange(MIN_FREQ,MAX_FREQ)
     .setValue(freq)
     ;
   cp5.addSlider("scaler")
     .setPosition(20,60)
     .setSize(100,20)
-    .setRange(100,2000)
+    .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scaler)
     ;
   dawesome  = new DawesomeToolkit(this);
@@ -55,6 +74,12 @@ void setup(){
   smooth();
 }
 
+void savePDF(float v){
+  if (frameCount > 60){
+
+  recordPDF = true;
+  }
+}
 void draw(){
   background(BACKGROUND_COLOR);
   if(recordPDF){
@@ -64,9 +89,9 @@ void draw(){
 
   //drawLinesRotated();
   drawLines(freq,scaler);
-  drawVerticalLines();
+  drawVerticalLines(freqV,scalerV);
   //drawDots();
-  drawSineWaves();
+  //drawSineWaves();
   //drawSineWavesLines();
 
 
@@ -140,6 +165,7 @@ void drawLinesRotated(){
   }
   popMatrix();
 }
+
 void drawLines(float f, float s){
 
   pushMatrix();
@@ -167,15 +193,15 @@ void drawLines(float f, float s){
   popMatrix();
 }
 
-void drawVerticalLines(){
+void drawVerticalLines(float f, float s){
   pushMatrix();
   //translate(0,height/2);
   strokeWeight(0.1);
 
   float x = 1;
   float i = 0;
-  float freq = 100.0;
-  float scaler = 4000;
+  float freq = f;
+  float scaler = s;
   float snap = 24;
 
   while(x < width){
@@ -221,9 +247,6 @@ void mousePressed(){
 void keyReleased() {
   if (key == 'p') {
     recordPDF = true;
-  }
-  if (key == 'r') {
-    recordVideo = true;
   }
 
 }
