@@ -31,6 +31,18 @@ DawesomeToolkit dawesome; //http://cloud.brendandawes.com/dawesometoolkit/
 
 void setup(){
   size(283,595);
+  initGUI();
+  dawesome  = new DawesomeToolkit(this);
+  dawesome.enableLazySave('s',".png");
+  expectedMinValue = 1;
+  expectedMaxValue =200 ;
+  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
+  strokeWeight(0.1);
+  smooth();
+}
+
+void initGUI(){
+
   cp5 = new ControlP5(this);
   cp5.setAutoDraw(false);
   cp5.setColorActive(#FC7357);
@@ -73,15 +85,7 @@ void setup(){
     .setLabel("Horizontal Scale")
     .setColorLabel(#000000)
     ;
-  dawesome  = new DawesomeToolkit(this);
-  dawesome.enableLazySave('s',".png");
-  expectedMinValue = 1;
-  expectedMaxValue =200 ;
-  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
-  strokeWeight(0.1);
-  smooth();
 }
-
 void savePDF(float v){
   if (frameCount > 60){
   recordPDF = true;
