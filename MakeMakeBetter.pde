@@ -41,6 +41,10 @@ void setup(){
   smooth();
 }
 
+/**
+ * Set up the GUI
+ */
+
 void initGUI(){
 
   cp5 = new ControlP5(this);
@@ -86,11 +90,22 @@ void initGUI(){
     .setColorLabel(#000000)
     ;
 }
+
+/**
+ * Save a PDF
+ * @param v a float 
+ */
+
 void savePDF(float v){
   if (frameCount > 60){
   recordPDF = true;
   }
 }
+
+/**
+ * Main Drawing
+ */
+
 void draw(){
   background(BACKGROUND_COLOR);
   if(recordPDF){
@@ -99,7 +114,7 @@ void draw(){
   }
 
   //drawLinesRotated();
-  drawLines(freq,scaler);
+  drawHorizontalLines(freq,scaler);
   drawVerticalLines(freqV,scalerV);
   //drawDots();
   //drawSineWaves();
@@ -177,7 +192,13 @@ void drawLinesRotated(){
   popMatrix();
 }
 
-void drawLines(float f, float s){
+/**
+ * Draw Horizontal Lines
+ * @param f a float defining the frequency
+ * @param s a float defining the scale
+ */
+
+void drawHorizontalLines(float f, float s){
 
   pushMatrix();
   //translate(0,height/2);
@@ -203,6 +224,12 @@ void drawLines(float f, float s){
   }
   popMatrix();
 }
+
+/**
+ * Draw Vertical Lines
+ * @param f a float defining the frequency
+ * @param s a float defining the scale
+ */
 
 void drawVerticalLines(float f, float s){
   pushMatrix();
