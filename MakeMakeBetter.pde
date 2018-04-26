@@ -5,8 +5,11 @@
 import dawesometoolkit.*;
 import processing.pdf.*;
 import toxi.math.*;
+import controlP5.*;
 float expectedMinValue=1;
 float expectedMaxValue;
+
+ControlP5 cp5;
 
 final String PROJECT = "MakeMakeBetter";
 final int BACKGROUND_COLOR = #ffffff;
@@ -18,10 +21,31 @@ boolean recordVideo = false;
 boolean recordPDF = false;
 ScaleMap logMap;
 
+float freq = 20;
+float scaler = 1000;
+
+
 DawesomeToolkit dawesome; //http://cloud.brendandawes.com/dawesometoolkit/
 
+
 void setup(){
-  size(300,612);
+  size(283,595);
+  cp5 = new ControlP5(this);
+  cp5.setAutoDraw(false);
+  cp5.setColorActive(#FC7357);
+  cp5.setColorBackground(#9C9999);
+  cp5.addSlider("freq")
+    .setPosition(20,20)
+    .setSize(100,20)
+    .setRange(10,200)
+    .setValue(freq)
+    ;
+  cp5.addSlider("scaler")
+    .setPosition(20,60)
+    .setSize(100,20)
+    .setRange(100,2000)
+    .setValue(scaler)
+    ;
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
   expectedMinValue = 1;
@@ -39,7 +63,7 @@ void draw(){
   }
 
   //drawLinesRotated();
-  drawLines();
+  drawLines(freq,scaler);
   drawVerticalLines();
   //drawDots();
   //drawSineWaves();
@@ -58,6 +82,7 @@ void draw(){
     endRecord();
     recordPDF = false;
   }
+  cp5.draw();
 }
 
 void drawSineWavesLines(){
@@ -123,7 +148,7 @@ void drawLinesRotated(){
   }
   popMatrix();
 }
-void drawLines(){
+void drawLines(float f, float s){
 
   pushMatrix();
   //translate(0,height/2);
@@ -131,8 +156,8 @@ void drawLines(){
 
   float y = 1;
   float i = 0;
-  float freq = 20.0;
-  float scaler = 1000;
+  float freq = f;
+  float scaler = s;
   float snap = 24;
 
   while(y < height){
