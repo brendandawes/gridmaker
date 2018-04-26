@@ -54,7 +54,7 @@ void setup(){
     .setSize(100,20)
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scalerV)
-    .setLabel("Vertical Scaler")
+    .setLabel("Vertical Scale")
     .setColorLabel(#000000)
     ;
   cp5.addSlider("freq")
@@ -70,7 +70,7 @@ void setup(){
     .setSize(100,20)
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scaler)
-    .setLabel("Horizontal Scaler")
+    .setLabel("Horizontal Scale")
     .setColorLabel(#000000)
     ;
   dawesome  = new DawesomeToolkit(this);
