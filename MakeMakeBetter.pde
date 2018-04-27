@@ -1,5 +1,5 @@
 /**
- * Lines and Dots generator for Make Make Better project
+ * Lines and Dots generator for Notes to Myself
  */
 
 import dawesometoolkit.*;
