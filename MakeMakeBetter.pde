@@ -3,9 +3,9 @@
  * http://brendandawes.com
  */
 
-import dawesometoolkit.*;
+import dawesometoolkit.*; //http://cloud.brendandawes.com/dawesometoolkit/
 import processing.pdf.*;
-import controlP5.*;
+import controlP5.*; //http://www.sojamo.de/libraries/controlP5/
 
 ControlP5 cp5;
 
@@ -23,7 +23,7 @@ float freqV = 20;
 float scalerV = 1000;
 
 
-DawesomeToolkit dawesome; //http://cloud.brendandawes.com/dawesometoolkit/
+DawesomeToolkit dawesome; 
 
 
 void setup(){
