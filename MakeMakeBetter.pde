@@ -1,5 +1,6 @@
 /**
- * Lines and Dots generator for Notes to Myself
+ * Grid Maker for Notes to Myself
+ * http://brendandawes.com
  */
 
 import dawesometoolkit.*;
