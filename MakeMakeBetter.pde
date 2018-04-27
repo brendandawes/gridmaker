@@ -5,21 +5,17 @@
 
 import dawesometoolkit.*;
 import processing.pdf.*;
-import toxi.math.*;
 import controlP5.*;
-float expectedMinValue=1;
-float expectedMaxValue;
 
 ControlP5 cp5;
 
-final String PROJECT = "MakeMakeBetter";
+final String PROJECT = "notes_to_myself";
 final int BACKGROUND_COLOR = #ffffff;
 final float MIN_FREQ = 10;
 final float MAX_FREQ = 200;
 final float MIN_SCALER = 100;
 final float MAX_SCALER = 2000;
 boolean recordPDF = false;
-ScaleMap logMap;
 
 float freq = 20;
 float scaler = 1000;
@@ -35,9 +31,6 @@ void setup(){
   initGUI();
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
-  expectedMinValue = 1;
-  expectedMaxValue =200 ;
-  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
   strokeWeight(0.1);
   smooth();
 }
@@ -99,7 +92,7 @@ void initGUI(){
 
 void savePDF(float v){
   if (frameCount > 60){
-  recordPDF = true;
+    recordPDF = true;
   }
 }
 
@@ -109,18 +102,14 @@ void savePDF(float v){
 
 void draw(){
   background(BACKGROUND_COLOR);
+
   if(recordPDF){
     beginRecord(PDF,dawesome.uniqueFileName()+PROJECT+".pdf");
     smooth();
   }
 
-  //drawLinesRotated();
   drawHorizontalLines(freq,scaler);
   drawVerticalLines(freqV,scalerV);
-  //drawDots();
-  //drawSineWaves();
-  //drawSineWavesLines();
-
 
   if (recordPDF){
     endRecord();
@@ -129,69 +118,6 @@ void draw(){
   cp5.draw();
 }
 
-void drawSineWavesLines(){
-
-
-  float count = 0;
-  strokeWeight(1);
-
-  for(int i=0; i < height; i++){
-    float y=(float)logMap.getMappedValueFor(log(i));
-    beginShape();
-    noFill();
-    strokeWeight(0.1);
-    stroke(0);
-    for(int j=0; j < width; j++){
-      float x=(float)logMap.getMappedValueFor(log(j));
-      float offset=sin(count)*100;
-      vertex(x,y+offset);
-      count+=0.01;
-    }
-    endShape();
-  }
-
-}
-void drawSineWaves(){
-
-
-  float count = 0;
-  strokeWeight(1);
-
-  for(int i=0; i < height; i++){
-    float y=(float)logMap.getMappedValueFor(log(i));
-    for(int j=0; j < width; j++){
-      float x=(float)logMap.getMappedValueFor(log(j));
-      float offset=sin(count)*100;
-      stroke(0);
-      strokeWeight(noise(j)*2);
-      point(x,y+offset);
-      count+=0.5;
-    }
-  }
-
-}
-
-void drawLinesRotated(){
-  pushMatrix();
-  //translate(-width/2,height/2);
-  strokeWeight(0.1);
-
-  for(int j=0; j < width; j++){
-    float x=(float)logMap.getMappedValueFor(log(j));
-    stroke(0);
-    line(x,0,x,height);
-
-    rotate(radians(sin(j)*45));
-  }
-  for(int i=0; i < height; i++){
-    float y=(float)logMap.getMappedValueFor(log(i));
-    stroke(0);
-
-    //strokeWeight(noise(i)*2);
-    line(0,y,width,y);
-  }
-  popMatrix();
-}
 
 /**
  * Draw Horizontal Lines
@@ -256,30 +182,6 @@ void drawVerticalLines(float f, float s){
   }
   popMatrix();
 
-}
-
-void drawDots(){
-
-  strokeWeight(1);
-
-  for(int j=0; j < width; j++){
-    float x=(float)logMap.getMappedValueFor(log(j));
-    stroke(0);
-    //line(x,0,x,height);
-    point(x,0);
-    for(int i=0; i < height; i++){
-      float y=(float)logMap.getMappedValueFor(log(i));
-      stroke(0);
-      //line(0,y,width,y);
-      point(x,y);
-    }
-  }
-}
-
-void mousePressed(){
-  expectedMaxValue = mouseX;
-  expectedMaxValue = mouseY; 
-  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
 }
 
 
