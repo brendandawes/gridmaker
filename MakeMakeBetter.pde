@@ -160,7 +160,6 @@ void drawHorizontalLines(float f, float s){
 
 void drawVerticalLines(float f, float s){
   pushMatrix();
-  //translate(0,height/2);
   strokeWeight(0.1);
 
   float x = 1;
@@ -170,12 +169,9 @@ void drawVerticalLines(float f, float s){
   float snap = 24;
 
   while(x < width){
-
     stroke(0);
-    //strokeWeight(noise(i)*2);
     line(x,0,x,height);
     float spacing = sin(i/freq)*scaler;
-    //spacing = map(spacing,-50,50,0,height);
     x += spacing;
     x = dawesome.snapToGrid(x,snap);
     i++;
@@ -189,6 +185,5 @@ void keyReleased() {
   if (key == 'p') {
     recordPDF = true;
   }
-
 }
 
