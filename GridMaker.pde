@@ -26,7 +26,7 @@ void setup(){
   dawesome.enableLazySave('s',".png");
   expectedMinValue = 1;
   expectedMaxValue =200 ;
-  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
+  logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height*10);
   strokeWeight(0.1);
   smooth();
 }
@@ -39,11 +39,11 @@ void draw(){
   }
 
   //drawLinesRotated();
-  drawLines();
-  drawVerticalLines();
+  //drawLines();
+  //drawVerticalLines();
   //drawDots();
   //drawSineWaves();
-  //drawSineWavesLines();
+  drawSineWavesLines();
 
   if (recordVideo){
     saveFrame("export/####-frame.tga");
@@ -195,7 +195,7 @@ void drawDots(){
 }
 
 void mousePressed(){
-  expectedMaxValue = mouseX;
+  expectedMinValue= mouseX;
   expectedMaxValue = mouseY; 
   logMap=new ScaleMap(log(expectedMinValue),log(expectedMaxValue),0,height);
 }
