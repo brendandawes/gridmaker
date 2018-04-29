@@ -27,7 +27,7 @@ DawesomeToolkit dawesome;
 
 
 void setup(){
-  size(283,595);
+  size(595,842);
   initGUI();
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
