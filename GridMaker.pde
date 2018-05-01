@@ -21,6 +21,7 @@ float freq = 20;
 float scaler = 1000;
 float freqV = 20;
 float scalerV = 1000;
+float snapAmount = 24;
 
 
 DawesomeToolkit dawesome; 
@@ -83,6 +84,12 @@ void initGUI(){
     .setLabel("Horizontal Scale")
     .setColorLabel(#000000)
     ;
+      cp5.addSlider("snapAmount")
+       .setPosition(20,180)
+       .setSize(100,20)
+       .setRange(6,48)
+       .setValue(snapAmount)
+       ;
 }
 
 /**
@@ -108,8 +115,8 @@ void draw(){
     smooth();
   }
 
-  drawHorizontalLines(freq,scaler);
-  drawVerticalLines(freqV,scalerV);
+  drawHorizontalLines(freq,scaler,snapAmount);
+  drawVerticalLines(freqV,scalerV,snapAmount);
 
   if (recordPDF){
     endRecord();
@@ -125,7 +132,7 @@ void draw(){
  * @param s a float defining the scale
  */
 
-void drawHorizontalLines(float f, float s){
+void drawHorizontalLines(float f, float s,float sn){
 
   pushMatrix();
   //translate(0,height/2);
@@ -135,7 +142,7 @@ void drawHorizontalLines(float f, float s){
   float i = 0;
   float freq = f;
   float scaler = s;
-  float snap = 24;
+  float snap = sn;
 
   while(y < height){
 
@@ -158,7 +165,7 @@ void drawHorizontalLines(float f, float s){
  * @param s a float defining the scale
  */
 
-void drawVerticalLines(float f, float s){
+void drawVerticalLines(float f, float s,float sn){
   pushMatrix();
   strokeWeight(0.1);
 
@@ -166,7 +173,7 @@ void drawVerticalLines(float f, float s){
   float i = 0;
   float freq = f;
   float scaler = s;
-  float snap = 24;
+  float snap = sn;
 
   while(x < width){
     stroke(0);
