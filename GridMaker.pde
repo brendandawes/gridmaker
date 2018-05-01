@@ -84,12 +84,18 @@ void initGUI(){
     .setLabel("Horizontal Scale")
     .setColorLabel(#000000)
     ;
-      cp5.addSlider("snapAmount")
-       .setPosition(20,180)
-       .setSize(100,20)
-       .setRange(6,48)
-       .setValue(snapAmount)
-       ;
+  cp5.addSlider("snapAmount")
+    .setPosition(20,180)
+    .setSize(100,20)
+    .setRange(3,24)
+    .setColorLabel(#000000)
+    .setColorTickMark(#000000)
+    .setNumberOfTickMarks(8)
+    .showTickMarks(true)
+    .snapToTickMarks(true)
+    .setLabel("Snap Amount")
+    .setValue(snapAmount)
+    ;
 }
 
 /**
