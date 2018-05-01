@@ -48,7 +48,7 @@ void initGUI(){
   cp5.setColorBackground(#9C9999);
   cp5.addButton("savePDF")
     .setValue(0)
-    .setPosition(20,180)
+    .setPosition(20,220)
     .setSize(100,20)
     .setCaptionLabel("Save PDF")
     ;
