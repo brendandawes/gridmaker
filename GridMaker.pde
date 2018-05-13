@@ -15,6 +15,8 @@ final float MIN_FREQ = 10;
 final float MAX_FREQ = 200;
 final float MIN_SCALER = 100;
 final float MAX_SCALER = 2000;
+final float STROKE_WEIGHT = 0.1;
+
 boolean recordPDF = false;
 
 float freq = 20;
@@ -32,7 +34,7 @@ void setup(){
   initGUI();
   dawesome  = new DawesomeToolkit(this);
   dawesome.enableLazySave('s',".png");
-  strokeWeight(0.1);
+  strokeWeight(STROKE_WEIGHT);
   smooth();
 }
 
@@ -142,7 +144,7 @@ void drawHorizontalLines(float f, float s,float sn){
 
   pushMatrix();
   //translate(0,height/2);
-  strokeWeight(0.1);
+  strokeWeight(STROKE_WEIGHT);
 
   float y = 1;
   float i = 0;
@@ -173,7 +175,7 @@ void drawHorizontalLines(float f, float s,float sn){
 
 void drawVerticalLines(float f, float s,float sn){
   pushMatrix();
-  strokeWeight(0.1);
+  strokeWeight(STROKE_WEIGHT);
 
   float x = 1;
   float i = 0;
