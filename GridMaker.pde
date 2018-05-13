@@ -11,6 +11,7 @@ ControlP5 cp5;
 
 final String PROJECT = "notes_to_myself";
 final int BACKGROUND_COLOR = #ffffff;
+final int LABEL_COLOR = #000000;
 final float MIN_FREQ = 10;
 final float MAX_FREQ = 200;
 final float MIN_SCALER = 100;
@@ -60,7 +61,7 @@ void initGUI(){
     .setRange(MIN_FREQ,MAX_FREQ)
     .setValue(freqV)
     .setLabel("Vertical Frequency")
-    .setColorLabel(#000000)
+    .setColorLabel(LABEL_COLOR)
     ;
   cp5.addSlider("scalerV")
     .setPosition(20,140)
@@ -68,7 +69,7 @@ void initGUI(){
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scalerV)
     .setLabel("Vertical Scale")
-    .setColorLabel(#000000)
+    .setColorLabel(LABEL_COLOR)
     ;
   cp5.addSlider("freq")
     .setPosition(20,20)
@@ -76,7 +77,7 @@ void initGUI(){
     .setRange(MIN_FREQ,MAX_FREQ)
     .setValue(freq)
     .setLabel("Horizontal Frequency")
-    .setColorLabel(#000000)
+    .setColorLabel(LABEL_COLOR)
     ;
   cp5.addSlider("scaler")
     .setPosition(20,60)
@@ -84,14 +85,14 @@ void initGUI(){
     .setRange(MIN_SCALER,MAX_SCALER)
     .setValue(scaler)
     .setLabel("Horizontal Scale")
-    .setColorLabel(#000000)
+    .setColorLabel(LABEL_COLOR)
     ;
   cp5.addSlider("snapAmount")
     .setPosition(20,180)
     .setSize(100,20)
     .setRange(3,24)
-    .setColorLabel(#000000)
-    .setColorTickMark(#000000)
+    .setColorLabel(LABEL_COLOR)
+    .setColorTickMark(LABEL_COLOR)
     .setNumberOfTickMarks(8)
     .showTickMarks(true)
     .snapToTickMarks(true)
