@@ -17,6 +17,7 @@ final float MAX_FREQ = 200;
 final float MIN_SCALER = 100;
 final float MAX_SCALER = 2000;
 final float STROKE_WEIGHT = 0.1;
+final float STROKE_COLOR = #000000;
 
 boolean recordPDF = false;
 
@@ -155,7 +156,7 @@ void drawHorizontalLines(float f, float s,float sn){
 
   while(y < height){
 
-    stroke(0);
+    stroke(STROKE_COLOR);
     //strokeWeight(noise(i)*2);
     line(0,y,width,y);
     float spacing = sin(i/freq)*scaler;
@@ -185,7 +186,7 @@ void drawVerticalLines(float f, float s,float sn){
   float snap = sn;
 
   while(x < width){
-    stroke(0);
+    stroke(STROKE_COLOR);
     line(x,0,x,height);
     float spacing = sin(i/freq)*scaler;
     x += spacing;
