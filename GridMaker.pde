@@ -1,5 +1,6 @@
 /**
  * Grid Maker for Notes to Myself
+ * http://producedforuse.com
  * http://brendandawes.com
  */
 
