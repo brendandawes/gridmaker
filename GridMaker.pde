@@ -28,9 +28,6 @@ float freqV = 20;
 float scalerV = 1000;
 float snapAmount = 24;
 
-
-
-
 void setup(){
   size(283,595);
   initGUI();

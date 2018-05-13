@@ -4,21 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-BACKGROUND_COLOR	MakeMakeBetter.pde	/^final int BACKGROUND_COLOR = #ffffff;$/;"	
-MAX_FREQ	MakeMakeBetter.pde	/^final float MAX_FREQ = 200;$/;"	
-MAX_SCALER	MakeMakeBetter.pde	/^final float MAX_SCALER = 2000;$/;"	
-MIN_FREQ	MakeMakeBetter.pde	/^final float MIN_FREQ = 10;$/;"	
-MIN_SCALER	MakeMakeBetter.pde	/^final float MIN_SCALER = 100;$/;"	
-PROJECT	MakeMakeBetter.pde	/^final String PROJECT = "notes_to_myself";$/;"	
-dawesome	MakeMakeBetter.pde	/^DawesomeToolkit dawesome; \/\/http:\/\/cloud.brendandawes.com\/dawesometoolkit\/$/;"	
-draw	MakeMakeBetter.pde	/^void draw(){$/;"	m
-drawHorizontalLines	MakeMakeBetter.pde	/^void drawHorizontalLines(float f, float s){$/;"	m
-drawVerticalLines	MakeMakeBetter.pde	/^void drawVerticalLines(float f, float s){$/;"	m
-freq	MakeMakeBetter.pde	/^float freq = 20;$/;"	
-freqV	MakeMakeBetter.pde	/^float freqV = 20;$/;"	
-initGUI	MakeMakeBetter.pde	/^void initGUI(){$/;"	m
-keyReleased	MakeMakeBetter.pde	/^void keyReleased() {$/;"	m
-savePDF	MakeMakeBetter.pde	/^void savePDF(float v){$/;"	m
-scaler	MakeMakeBetter.pde	/^float scaler = 1000;$/;"	
-scalerV	MakeMakeBetter.pde	/^float scalerV = 1000;$/;"	
-setup	MakeMakeBetter.pde	/^void setup(){$/;"	m
+BACKGROUND_COLOR	GridMaker.pde	/^final int BACKGROUND_COLOR = #ffffff;$/;"	
+LABEL_COLOR	GridMaker.pde	/^final int LABEL_COLOR = #000000;$/;"	
+MAX_FREQ	GridMaker.pde	/^final float MAX_FREQ = 200;$/;"	
+MAX_SCALER	GridMaker.pde	/^final float MAX_SCALER = 2000;$/;"	
+MIN_FREQ	GridMaker.pde	/^final float MIN_FREQ = 10;$/;"	
+MIN_SCALER	GridMaker.pde	/^final float MIN_SCALER = 100;$/;"	
+PROJECT	GridMaker.pde	/^final String PROJECT = "notes_to_myself";$/;"	
+STROKE_COLOR	GridMaker.pde	/^final float STROKE_COLOR = #000000;$/;"	
+STROKE_WEIGHT	GridMaker.pde	/^final float STROKE_WEIGHT = 0.1;$/;"	
+dawesome	GridMaker.pde	/^DawesomeToolkit dawesome; $/;"	
+draw	GridMaker.pde	/^void draw(){$/;"	m
+drawHorizontalLines	GridMaker.pde	/^void drawHorizontalLines(float f, float s,float sn){$/;"	m
+drawVerticalLines	GridMaker.pde	/^void drawVerticalLines(float f, float s,float sn){$/;"	m
+freq	GridMaker.pde	/^float freq = 20;$/;"	
+freqV	GridMaker.pde	/^float freqV = 20;$/;"	
+initGUI	GridMaker.pde	/^void initGUI(){$/;"	m
+keyReleased	GridMaker.pde	/^void keyReleased() {$/;"	m
+savePDF	GridMaker.pde	/^void savePDF(float v){$/;"	m
+scaler	GridMaker.pde	/^float scaler = 1000;$/;"	
+scalerV	GridMaker.pde	/^float scalerV = 1000;$/;"	
+setup	GridMaker.pde	/^void setup(){$/;"	m
+snapAmount	GridMaker.pde	/^float snapAmount = 24;$/;"	
