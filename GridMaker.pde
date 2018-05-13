@@ -8,6 +8,7 @@ import processing.pdf.*;
 import controlP5.*; //http://www.sojamo.de/libraries/controlP5/
 
 ControlP5 cp5;
+DawesomeToolkit dawesome; 
 
 final String PROJECT = "notes_to_myself";
 final int BACKGROUND_COLOR = #ffffff;
@@ -28,7 +29,6 @@ float scalerV = 1000;
 float snapAmount = 24;
 
 
-DawesomeToolkit dawesome; 
 
 
 void setup(){
