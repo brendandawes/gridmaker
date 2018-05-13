@@ -38,7 +38,6 @@ void setup(){
 }
 
 
-
 void draw(){
   background(BACKGROUND_COLOR);
 
@@ -79,7 +78,6 @@ void savePDF(float v){
 void drawHorizontalLines(float f, float s,float sn){
 
   pushMatrix();
-  //translate(0,height/2);
   strokeWeight(STROKE_WEIGHT);
 
   float y = 1;
