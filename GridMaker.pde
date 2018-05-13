@@ -38,20 +38,6 @@ void setup(){
 }
 
 
-/**
- * Save a PDF
- * @param v a float 
- */
-
-void savePDF(float v){
-  if (frameCount > 60){
-    recordPDF = true;
-  }
-}
-
-/**
- * Main Drawing
- */
 
 void draw(){
   background(BACKGROUND_COLOR);
@@ -68,9 +54,21 @@ void draw(){
     endRecord();
     recordPDF = false;
   }
+
   cp5.draw();
 }
 
+
+/**
+ * Save a PDF
+ * @param v a float 
+ */
+
+void savePDF(float v){
+  if (frameCount > 60){
+    recordPDF = true;
+  }
+}
 
 /**
  * Draw Horizontal Lines

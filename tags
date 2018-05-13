@@ -19,7 +19,7 @@ drawHorizontalLines	GridMaker.pde	/^void drawHorizontalLines(float f, float s,fl
 drawVerticalLines	GridMaker.pde	/^void drawVerticalLines(float f, float s,float sn){$/;"	m
 freq	GridMaker.pde	/^float freq = 20;$/;"	
 freqV	GridMaker.pde	/^float freqV = 20;$/;"	
-initGUI	GridMaker.pde	/^void initGUI(){$/;"	m
+initGUI	GUI.pde	/^void initGUI(){$/;"	m
 keyReleased	GridMaker.pde	/^void keyReleased() {$/;"	m
 savePDF	GridMaker.pde	/^void savePDF(float v){$/;"	m
 scaler	GridMaker.pde	/^float scaler = 1000;$/;"	
