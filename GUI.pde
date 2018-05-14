@@ -1,3 +1,6 @@
+/*
+ * Create the GUI
+ */
 
 void initGUI(){
 
